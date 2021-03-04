@@ -34,6 +34,10 @@ import Content from "./Components/Sections/WhyChooseUs.js";
 import Subscribe from "./Components/Sections/Subsribe.js";
 import TopBar from "./Components/Sections/TopStyleBar.js";
 import TeamSection from './LandingPage/Sections/TeamSection';
+import HomeSectionPills from "./Components/Sections/HomeSectionsPills.js";
+import { Avatar } from "@material-ui/core";
+import logo from './../assets/img/faces/logo.png'
+
 const useStyles = makeStyles(styles);
 
 export default function AboutUs(props) {
@@ -42,8 +46,9 @@ export default function AboutUs(props) {
   return (
     <div>
       <Header
-        
-        brand="Modicum Technologies"
+      
+      leftLinks={ <Avatar variant="square" src={logo} style={{width:"50%",height:"30%"}} />}
+      // brand="Modicum Technologies"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
@@ -53,17 +58,17 @@ export default function AboutUs(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg4.jpg")} >
+      <Parallax image={require("assets/img/faces/img4.jpg")} >
       <div className={classes.container}>
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
             <GridItem >
-                <SectionCarousel />
+               
            
-                <h1 className={classes.title}>We are Software Experts</h1>
-                <h3 className={classes.subtitle}>
-                  We develop Softwares like Websites mobil apps And erp Softwares
+                <h1 className={classes.title} style={{color:"orangered"}}>Welcome to MODICUM</h1>
+                <h3 className={classes.subtitle} style={{color:"black",fontWeight:"bold"}}>
+                Modicum provides one stop automated solution for your trade and industry. Depending on the size and field of your organization, we have different set of services to meet your requirements.
                 </h3>
                 </GridItem>
               </div>
@@ -85,7 +90,7 @@ export default function AboutUs(props) {
         
       <AboutUsSectionTabs/>
         <Content/>
-        <TeamSection/>
+        <HomeSectionPills />
         <Subscribe/>
 
         

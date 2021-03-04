@@ -4,8 +4,8 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import { Avatar, Card, CardMedia, Grid } from '@material-ui/core';
-
+import { Avatar, Card, CardMedia, Grid, Hidden } from '@material-ui/core';
+import img from "./../../../assets/img/faces/bulb.jpg"
 const useStyles = makeStyles((theme) => ({
   primaryAction: {
     marginRight: theme.spacing(2),
@@ -38,8 +38,9 @@ export default function AboutUsSectionTabs(props) {
           <Box mt={4}>
             {/* <Button variant="contained" color="primary" className={classes.primaryAction}>{content['primary-action']}</Button>
             <Button color="secondary">{content['secondary-action']}</Button> */}
-             <Avatar alt="Remy Sharp" src="" variant="square" style={{width:"100%"}} />
-            
+            <Hidden only={["xs"]}>
+             <Avatar alt="Remy Sharp" src={img} variant="square" style={{width:"100%",height:"300px"}} />
+             </Hidden>
           </Box>
         </Box>
 

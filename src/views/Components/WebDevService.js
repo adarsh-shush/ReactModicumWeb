@@ -24,8 +24,10 @@ import GridItem from "components/Grid/GridItem.js";
 import SectionCarousel from "./Sections/SectionCarousel.js";
 import Subscribe from "./Sections/Subsribe.js";
 import TopBar from "./Sections/TopStyleBar.js";
-import { Typography } from "@material-ui/core";
-import SectionServices from "./Sections/SectionServices.js";
+import { Avatar, Typography } from "@material-ui/core";
+import ServiceCard from "./Sections/ServiceTry.js";
+import TechCard from "./Sections/TechCard.js";
+import logo from './../../assets/img/faces/logo.png'
 const useStyles = makeStyles(styles);
 
 export default function WebDevelopment(props) {
@@ -34,8 +36,9 @@ export default function WebDevelopment(props) {
   return (
     <div>
       <Header
-        
-        brand="Modicum Technologies"
+      
+      leftLinks={ <Avatar variant="square" src={logo} style={{width:"50%",height:"30%"}} />}
+      // brand="Modicum Technologies"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
@@ -45,7 +48,7 @@ export default function WebDevelopment(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg4.jpg")} >
+      <Parallax image={require("assets/img/faces/service1.jpg")} >
       <div className={classes.container}>
           <GridContainer>
             <GridItem>
@@ -53,11 +56,11 @@ export default function WebDevelopment(props) {
             <GridItem >
                
            
-                <h1 className={classes.title}>We are Software Experts</h1>
-                <h3 className={classes.subtitle}>
-                  We develop Softwares like Websites mobil apps And erp Softwares
-                </h3>
-              
+                <h1  style={{color:"black",textAlign:"center",fontWeight:"bold",fontSize:"70px"}}>We provide a wide range of services</h1>
+                <h3 style={{color:"black",textAlign:"center",fontWeight:"bold"}}>
+                The development team of Modicum is equipped with proper human resources specialized in </h3>
+                <h3 style={{color:"black",textAlign:"center",fontWeight:"bold"}}>
+                different system development tasks. </h3>
                 </GridItem>
               </div>
               
@@ -69,9 +72,10 @@ export default function WebDevelopment(props) {
 
       <div className={classNames(classes.main, classes.mainRaised)}>
         <TopBar/>
-            <Typography variant="h3" component="h3" style={{textAlign:"left",marginLeft:"10%",fontSize:"50px",fontWeight:"bold",color:"blueviolet"}}>FUTURE-READY APPLICATIONS</Typography>
+            <Typography variant="h3" component="h3" style={{textAlign:"left",marginLeft:"10%",fontSize:"50px",fontWeight:"bold",color:"blueviolet"}}>FUTURE-READY </Typography>
             <Typography variant="h5" component="h5" style={{textAlign:"left",marginLeft:"10%",fontWeight:"bold",color:"black"}}>Ready To be Technical Patner in every Sectore</Typography>
-            <SectionServices/>
+        <TechCard/>
+            <ServiceCard/>
         <Subscribe/>
       </div>
       <Footer />

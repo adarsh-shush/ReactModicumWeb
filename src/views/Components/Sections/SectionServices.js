@@ -19,6 +19,9 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/team
 import team1 from "assets/img/faces/programming-concept-illustration-vector.jpg";
 import team2 from "assets/img/faces/programming-concept-illustration-vector.jpg";
 import team3 from "assets/img/faces/programming-concept-illustration-vector.jpg";
+import TechCard from "./TechCard";
+import CartCard from "./ServiceHorizontal";
+import ServiceCard from "./ServiceTry";
 
 const useStyles = makeStyles(styles);
 
@@ -33,15 +36,9 @@ export default function SectionServices() {
     <div className={classes.section}>
     <h1>Technology vision 2021: We, the post-digital people</h1>
     <h3>Technologies We Use- </h3>
-    <h3>React Js </h3>
-    <h3>React Native </h3>
-    <h3>Flutter </h3>
-    <h3>Angular JS </h3>
-    <h3>Javascript </h3>
-    <h3>Java </h3>
-    <h3> Node JS</h3>
-    <h3> java </h3>
-    <h3>Javascript </h3>
+    <TechCard/>
+    
+
       <h2 className={classes.title}>Services Provided By Us...!!!</h2>
       <h2 className={classes.title}>End-to-end application services</h2>
       <h5 className={classes.title}>From the development of new applications, through modernization, management and maintenance, we cover all stages of the application lifecycle.</h5>
@@ -217,6 +214,8 @@ export default function SectionServices() {
           </GridItem>
         </GridContainer>
       </div>
+     
+      
     </div>
   );
 }

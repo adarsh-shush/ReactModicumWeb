@@ -8,8 +8,8 @@ export default function TopBar() {
       
         <div style={{height:'100px',width:'100%',marginBottom:'91px',
         backgroundBlendMode:'darken',
-        backgroundColor:'#1769aa',
-        backgroundImage:``,
+        backgroundColor:'#9a3d3d',
+        backgroundImage:`#795548`,
         marginLeft:"auto",
         marginRight:"auto",
         display:'flex',alignItems:'center',justifyContent:'space-around',gap:'20px',overflow:'auto'}}>

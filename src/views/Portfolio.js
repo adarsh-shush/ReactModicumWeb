@@ -35,6 +35,9 @@ import Subscribe from "./Components/Sections/Subsribe.js";
 import TopBar from "./Components/Sections/TopStyleBar.js";
 import TeamSection from './LandingPage/Sections/TeamSection';
 import ProfilePage from "./ProfilePage/ProfilePage.js";
+import { Avatar } from "@material-ui/core";
+import logo from './../assets/img/faces/logo.png'
+
 const useStyles = makeStyles(styles);
 
 export default function PortfolioPage(props) {
@@ -42,9 +45,10 @@ export default function PortfolioPage(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
-        
-        brand="Modicum Technologies"
+    <Header
+      
+      leftLinks={ <Avatar variant="square" src={logo} style={{width:"50%",height:"30%"}} />}
+      // brand="Modicum Technologies"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
@@ -54,19 +58,27 @@ export default function PortfolioPage(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg4.jpg")} >
+      <Parallax image={require("assets/img/faces/pexels-thisisengineering-3861972.jpg")} >
       <div className={classes.container}>
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-            <GridItem >
-                <SectionCarousel />
-           
-                <h1 className={classes.title}>We are Software Experts</h1>
-                <h3 className={classes.subtitle}>
-                  We develop Softwares like Websites mobil apps And erp Softwares
-                </h3>
-                </GridItem>
+              <GridItem >
+               
+              <h1  style={{color:"black",textAlign:"center",fontWeight:"bold",fontSize:"30px"}}>OUR PROJECTS</h1>
+
+               <h1  style={{color:"black",textAlign:"center",fontWeight:"bold",fontSize:"50px"}}>We provide a wide range of services</h1>
+               <h3 style={{color:"black",textAlign:"center",fontWeight:"bold"}}>
+               The development team of Modicum is equipped
+               </h3>
+               <h3 style={{color:"black",textAlign:"center",fontWeight:"bold"}}>
+               with proper human resources specialized in
+               </h3>
+               <h3 style={{color:"black",textAlign:"center",fontWeight:"bold"}}>
+               different system development tasks.
+
+</h3>
+               </GridItem>
               </div>
               
             </GridItem>

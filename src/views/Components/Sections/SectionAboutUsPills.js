@@ -21,7 +21,7 @@ export default function SectionAboutUsPills() {
   return (
     <div className={classes.section}>
       <div className={classes.container}>
-        <div id="pills">
+        <div id="about_Pills">
         <h3><b>WHY CHOOSE US...??</b></h3>
           <GridContainer>
            

@@ -1,76 +1,69 @@
 import React from "react";
-// react component for creating beautiful carousel
-import Carousel from "react-slick";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
-import LocationOn from "@material-ui/icons/LocationOn";
-// core components
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
+import SwipeableViews from "react-swipeable-views";
+import { autoPlay } from "react-swipeable-views-utils";
 
-import image1 from "assets/img/bg.jpg";
-import image2 from "assets/img/bg2.jpg";
-import image3 from "assets/img/bg3.jpg";
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
+const styles = {
+  root: {
+    position: "relative",
+    
+  },
+  slide: {
+    padding: 15,
+    Height: "80%",
+    width:"80%",
+    color: "#fff"
+  },
+  slide1: {
+    // backgroundColor: "#FEA900"
+  },
+  slide2: {
+    // backgroundColor: "#B3DC4A"
+  },
+  slide3: {
+    // backgroundColor: "#6AC0FF"
+  }
+};
 
-const useStyles = makeStyles(styles);
-
-export default function SectionCarousel() {
-  const classes = useStyles();
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 400,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false
+class DemoAutoPlay extends React.Component {
+  state = {
+    index: 0
   };
-  return (
-    <div className={classes.section}>
-      <div className={classes.container}>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={10} className={classes.marginAuto}>
-            <Card carousel>
-              <Carousel {...settings}>
-                <div>
-                  <img src={image1} alt="First slide" className="slick-image" />
-                  <div className="slick-caption">
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      Yellowstone National Park, United States
-                    </h4>
-                  </div>
-                </div>
-                <div>
-                  <img
-                    src={image2}
-                    alt="Second slide"
-                    className="slick-image"
-                  />
-                  <div className="slick-caption">
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      Somewhere Beyond, United States
-                    </h4>
-                  </div>
-                </div>
-                <div>
-                  <img src={image3} alt="Third slide" className="slick-image" />
-                  <div className="slick-caption">
-                    <h4>
-                      <LocationOn className="slick-icons" />
-                      Yellowstone National Park, United States
-                    </h4>
-                  </div>
-                </div>
-              </Carousel>
-            </Card>
-          </GridItem>
-        </GridContainer>
+
+  handleChangeIndex = (index) => {
+    this.setState({
+      index
+    });
+  };
+
+  render() {
+    const { index } = this.state;
+
+    return (
+      <div style={styles.root}>
+        <AutoPlaySwipeableViews
+          index={index}
+          onChangeIndex={this.handleChangeIndex}
+        >
+          <div style={Object.assign({}, styles.slide, styles.slide1)}>
+           <h1 style={{fontWeight:"bold",fontSize:"100px", color:"black",width:"80%",height:"80%"}}>  We Built Softwares</h1><br></br>
+            <h3 style={{fontWeight:"bold",fontSize:"50px",textAlign:'center',color:"black"}}>Innovative | Top Quality | On Time</h3>
+          </div>
+          <div style={Object.assign({}, styles.slide, styles.slide2)}>
+          <h1 style={{fontWeight:"bold",fontSize:"100px",color:"black"}}>  We Deliver Unique Creative Design</h1>
+          <h3 style={{fontWeight:"bold",fontSize:"50px",textAlign:'center',color:"black"}}> Think | Design | Execute</h3>
+
+          </div>
+          <div style={Object.assign({}, styles.slide, styles.slide3)}>
+          <h1 style={{fontWeight:"bold",fontSize:"100px",color:"black"}}>   We Create Custom Application </h1>
+          <h3 style={{fontWeight:"bold",fontSize:"50px",textAlign:'center',color:"black"}}>  Analyze | Code | Develop</h3>
+
+          </div>
+        </AutoPlaySwipeableViews>
       </div>
-    </div>
-  );
+    );
+  }
 }
+
+export default DemoAutoPlay;

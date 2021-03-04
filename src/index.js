@@ -14,6 +14,7 @@ import AboutUs from "views/AboutUs";
 import WebDevelopment from "views/Components/WebDevService";
 import PortfolioPage from './views/Portfolio';
 import ContactusPage from "views/Contactus";
+import Requestquote from "views/RequestQuote";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -26,6 +27,8 @@ ReactDOM.render(
       <Route path="/Services/WebDevelopment/modicumtechnologies" component={WebDevelopment} />
       <Route path="/Portfolio/modicumtechnologies" component={PortfolioPage} />
       <Route path="/Contactuson/modicumtechnologies" component={ContactusPage} />
+      <Route path="/Requestquote/modicumtechnologies" component={Requestquote} />
+
       <Route path="/" component={Components} />
     </Switch>
   </Router>,

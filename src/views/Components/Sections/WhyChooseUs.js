@@ -63,7 +63,7 @@ export default function Content(props) {
       <Container maxWidth="lg">
         <Box py={12}>
           <Grid container spacing={8}>
-            <Grid item xs={12} md={6} className={classes.imagesColumn}>
+            <Grid item xs={12} md={5} className={classes.imagesColumn}>
               <Grid container spacing={2}>
                 <Grid item xs={12} md={8}>
                   <Box display="flex" height="100%">
@@ -127,7 +127,7 @@ export default function Content(props) {
 
             
             
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={7}>
               <Box  height="100%">
                 <Box >
                   <Typography variant="h3" component="h3" gutterBottom={true}>

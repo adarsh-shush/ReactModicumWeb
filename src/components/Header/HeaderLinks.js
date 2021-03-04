@@ -13,19 +13,28 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
 import { Apps, CloudDownload } from "@material-ui/icons";
-
+import AppsIcon from '@material-ui/icons/Apps';
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import ImportContactsIcon from '@material-ui/icons/ImportContacts';
+import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
+import ListAltIcon from '@material-ui/icons/ListAlt';
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
-
+import { Avatar } from "@material-ui/core";
+import logo from './../../assets/img/faces/app1.jpg';
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
+    <>
+  
     <List className={classes.list}>
+    
       <ListItem className={classes.listItem}>
         
         <Button
@@ -34,7 +43,7 @@ export default function HeaderLinks(props) {
          
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} />Home
+          <AppsIcon className={classes.icons} />Home
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -44,7 +53,7 @@ export default function HeaderLinks(props) {
          
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} />About Us
+          <AccountBoxIcon className={classes.icons} />About Us
         </Button>
       </ListItem>
       {/* <ListItem className={classes.listItem}>
@@ -66,7 +75,7 @@ export default function HeaderLinks(props) {
             className: classes.navLink,
             color: "transparent"
           }}
-          buttonIcon={Apps}
+          buttonIcon={DashboardIcon}
           dropdownList={[
             <Link to="/Services/WebDevelopment/modicumtechnologies" className={classes.dropdownLink}>
               Website Development
@@ -97,7 +106,7 @@ export default function HeaderLinks(props) {
          
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} />Portfolio
+          <ImportContactsIcon className={classes.icons} />Portfolio
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -107,7 +116,17 @@ export default function HeaderLinks(props) {
          
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} />Contact Us
+          <ContactPhoneIcon className={classes.icons} />Contact Us
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="/Requestquote/modicumtechnologies"
+          color="transparent"
+        
+          className={classes.navLink}
+        >
+          <ListAltIcon className={classes.icons} />Request quote
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -167,5 +186,6 @@ export default function HeaderLinks(props) {
         </Tooltip>
       </ListItem>
     </List>
+    </>
   );
 }

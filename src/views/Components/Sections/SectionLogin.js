@@ -25,13 +25,18 @@ export default function SectionLogin() {
   return (
     <div className={classes.section}>
       <div className={classes.container}>
+      <h2 style={{fontSize:"50px", fontWeight:"bold"}}>Would you like to start a project with us?</h2>
+      <h2 style={{fontSize:"25px", fontWeight:"bold", color:"brown"}}>Modicum is focusing exclusively in high quality and cost-effective software development and implementation services.</h2>
+
         <GridContainer justify="center">
+        
           <GridItem xs={12} sm={12} md={4}>
+         
             <Card>
               <form className={classes.form}>
                 <CardHeader color="primary" className={classes.cardHeader}>
-                  <h4>Contact Us</h4>
-                  <div className={classes.socialLine}>
+                  <h4>Drop US a Mail</h4>
+                  {/* <div className={classes.socialLine}>
                     <Button
                       justIcon
                       href="#pablo"
@@ -63,7 +68,7 @@ export default function SectionLogin() {
                         }
                       />
                     </Button>
-                  </div>
+                  </div> */}
                 </CardHeader>
                 <p className={classes.divider}>Or Be Classical</p>
                 <CardBody>
@@ -97,7 +102,22 @@ export default function SectionLogin() {
                       )
                     }}
                   />
-                  <CustomInput
+                   <CustomInput
+                    labelText="Phone Number"
+                    id="tel"
+                    formControlProps={{
+                      fullWidth: true
+                    }}
+                    inputProps={{
+                      type: "tel",
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <Email className={classes.inputIconsColor} />
+                        </InputAdornment>
+                      )
+                    }}
+                  />
+                  {/* <CustomInput
                     labelText="Password"
                     id="pass"
                     formControlProps={{
@@ -114,7 +134,7 @@ export default function SectionLogin() {
                       ),
                       autoComplete: "off"
                     }}
-                  />
+                  /> */}
                 </CardBody>
                 <CardFooter className={classes.cardFooter}>
                   <Button simple color="primary" size="lg">

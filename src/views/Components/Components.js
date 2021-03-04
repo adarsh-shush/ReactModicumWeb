@@ -33,7 +33,9 @@ import Features from "./Sections/HomeServices.js";
 import TeamSection from "views/LandingPage/Sections/TeamSection.js";
 import TopBar from "./Sections/TopStyleBar.js";
 import Subscribe from "./Sections/Subsribe.js";
-
+import HomeSectionPills from "./Sections/HomeSectionsPills.js";
+import { Avatar } from "@material-ui/core";
+import logo from './../../assets/img/faces/logo.png'
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
@@ -42,8 +44,9 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        
-        brand="Modicum Technologies"
+      
+      leftLinks={ <Avatar variant="square" src={logo} style={{width:"80%",height:"30%"}} />}
+      // brand="Modicum Technologies"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
@@ -53,16 +56,17 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg4.jpg")}>
+      <Parallax image={require("assets/img/faces/img2.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
-              <div className={classes.brand}>
+              {/* <div className={classes.brand}>
                 <h1 className={classes.title}>We are Software Experts</h1>
                 <h3 className={classes.subtitle}>
                   We develop Softwares like Websites mobil apps And erp Softwares
                 </h3>
-              </div>
+              </div> */}
+               <SectionCarousel />
             </GridItem>
           </GridContainer>
         </div>
@@ -70,18 +74,17 @@ export default function Components(props) {
 
       <div className={classNames(classes.main, classes.mainRaised)}>
       <TopBar/>
-       <HomeAboutContent/>
-     
-        <Features/>
-        <SectionPills />
+      <HomeAboutContent/>   
+      <Features/>
+      <HomeSectionPills />
         
         
-        <TeamSection/>
+      <TeamSection/>
         
         {/* <SectionCompletedExamples /> */}
         
-        <SectionLogin />
-        <Subscribe/>
+      <SectionLogin />
+      <Subscribe/>
         {/* <SectionExamples /> */}
         
       </div>

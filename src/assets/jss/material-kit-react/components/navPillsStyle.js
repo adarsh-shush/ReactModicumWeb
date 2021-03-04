@@ -41,7 +41,7 @@ const navPillsStyle = theme => ({
     position: "relative",
     display: "block",
     borderRadius: "30px",
-    minWidth: "25px",
+    minWidth: "180px",
     textAlign: "center",
     transition: "all .3s",
     padding: "10px 15px",
@@ -49,6 +49,20 @@ const navPillsStyle = theme => ({
     height: "auto",
     opacity: "1",
     
+    margin: "0 5px"
+  },
+  pills_about:{
+    float: "left",
+    position: "relative",
+    display: "block",
+    borderRadius: "30px",
+    minWidth: "250px",
+    textAlign: "center",
+    transition: "all .3s",
+    padding: "10px 15px",
+    color: "#555555",
+    height: "auto",
+    opacity: "1",
     margin: "0 5px"
   },
   pillsWithIcons: {
@@ -133,7 +147,7 @@ const navPillsStyle = theme => ({
     fontWeight: "500",
     textTransform: "uppercase",
     "&,& *": {
-      letterSpacing: "normal"
+      letterSpacing: "normal",
     }
   }
 });

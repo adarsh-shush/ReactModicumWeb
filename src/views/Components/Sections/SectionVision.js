@@ -37,8 +37,8 @@ export default function HowItWorks(props) {
   const classes = useStyles();
   
   const content = {
-    '02_header': 'Ethics Process',
-    '02_description': 'Modicum Technologies Pvt. Ltd. is a leading provider of cutting-edge technologies and services, offering scalable solutions for companies of all sizes. Founded by a group of friends who started by scribbling their ideas on a piece of paper, today we offer smart, innovative services.',
+    '02_header': 'Our Process',
+    '02_description': 'We take a series of steps and decisions to refining a process that delivers results. Working through six development phases, we collaborate continuously with you, regularly checking against the project goals and ensuring user’s needs are met.Throughout the process, we produce detailed documentation that means we have the same expectations and clear criteria for ensuring the highest quality work.',
     'image1': 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     'step1': 'Who Are We',
     'step1-desc': 'Modicum Technologies Pvt. Ltd. is a leading provider of cutting-edge technologies and services, offering scalable solutions for companies of all sizes. Founded by a group of friends who started by scribbling their ideas on a piece of paper, today we offer smart, innovative services.',

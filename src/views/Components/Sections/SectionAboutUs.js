@@ -15,7 +15,7 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-
+import logo from "./../../../assets/img/faces/logosymbolpng.png"
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: "100%",
@@ -57,7 +57,7 @@ export default function SectionAboutUs() {
     <Typography variant="h2" component="h2" style={{textAlign:"center"}} >ABOUT US</Typography>
         <CardHeader
             avatar={
-            <Avatar src="" aria-label="recipe" className={classes.avatar}>
+            <Avatar src={logo} aria-label="recipe" className={classes.avatar}>
                 
             </Avatar>
             }
@@ -67,73 +67,17 @@ export default function SectionAboutUs() {
         />
       
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like. This impressive paella is a perfect party dish
-          and a fun meal to cook together with your guests. Add 1 cup of frozen
-          peas along with the mussels, if you like. This impressive paella is a
-          perfect party dish and a fun meal to cook together with your guests.
-          Add 1 cup of frozen peas along with the mussels, if you like. This
-          impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like. This impressive paella is a perfect party dish
-          and a fun meal to cook together with your guests. Add 1 cup of frozen
-          peas along with the mussels, if you like. This impressive paella is a
-          perfect party dish and a fun meal to cook together with your guests.
-          Add 1 cup of frozen peas along with the mussels, if you like. This
-          impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like. This impressive paella is a perfect party dish
-          and a fun meal to cook together with your guests. Add 1 cup of frozen
-          peas along with the mussels, if you like.
+        <Typography variant="body2" color="textSecondary" component="p" style={{fontSize:"20px"}}>
+        Our software development solutions aim to magnify your digital experience by implementing innovative and inventive solutions for both small and large-scale businesses. Our key objective is to help companies to drive sales through the accomplishment of impactful online brand visibility, increased traffic, and prompt engagement with the target audience.
+We are a Bangalore based website software development company, specializing in custom app development, e-commerce website design & development, Website optimization, and ERP development. We’ve made it our mission to cultivate interactive digital experiences that excite and inspire.
+
+We have high coding standards, design with user in mind, and above all are transparent in our collaboration both with our teammates and clients. The combination of curiosity, drive, and respect makes us a special collection of professionals. 
+
+
         </Typography>
-        <CardActions disableSpacing>
        
-       <IconButton
-         className={clsx(classes.expand, {
-           [classes.expandOpen]: expanded
-         })}
-         onClick={handleExpandClick}
-         aria-expanded={expanded}
-         aria-label="show more"
-       >
-         <h6>See More</h6>
-       </IconButton>
-     </CardActions>
       </CardContent>
-     
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and
-            set aside for 10 minutes.
-          </Typography>
-          <Typography paragraph>
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet
-            over medium-high heat. Add chicken, shrimp and chorizo, and cook,
-            stirring occasionally until lightly browned, 6 to 8 minutes.
-            Transfer shrimp to a large plate and set aside, leaving chicken and
-            chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes,
-            onion, salt and pepper, and cook, stirring often until thickened and
-            fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2
-            cups chicken broth; bring to a boil.
-          </Typography>
-          <Typography paragraph>
-            Add rice and stir very gently to distribute. Top with artichokes and
-            peppers, and cook without stirring, until most of the liquid is
-            absorbed, 15 to 18 minutes. Reduce heat to medium-low, add reserved
-            shrimp and mussels, tucking them down into the rice, and cook again
-            without stirring, until mussels have opened and rice is just tender,
-            5 to 7 minutes more. (Discard any mussels that don’t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then
-            serve.
-          </Typography>
-        </CardContent>
-      </Collapse>
+    
     </Card>
 
     </>

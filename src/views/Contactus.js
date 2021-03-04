@@ -36,6 +36,9 @@ import TopBar from "./Components/Sections/TopStyleBar.js";
 import TeamSection from './LandingPage/Sections/TeamSection';
 import ProfilePage from "./ProfilePage/ProfilePage.js";
 import LoginPage from "./LoginPage/LoginPage.js";
+import { Avatar } from "@material-ui/core";
+import logo from './../assets/img/faces/logo.png'
+
 const useStyles = makeStyles(styles);
 
 export default function ContactusPage(props) {
@@ -44,9 +47,10 @@ export default function ContactusPage(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
-        
-        brand="Modicum Technologies"
+     <Header
+      
+      leftLinks={ <Avatar variant="square" src={logo} style={{width:"50%",height:"30%"}} />}
+      // brand="Modicum Technologies"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
@@ -56,7 +60,7 @@ export default function ContactusPage(props) {
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg4.jpg")} >
+     <Parallax image={require("assets/img/faces/img4.jpg")} >
       <div className={classes.container}>
           <GridContainer>
             <GridItem>
@@ -64,9 +68,14 @@ export default function ContactusPage(props) {
             <GridItem >
                
            
-                <h1 className={classes.title}>We are Software Experts</h1>
-                <h3 className={classes.subtitle}>
-                 How can we help you...??
+                <h1 className={classes.title} style={{color:"orangered"}}>Contact Us</h1>
+                <h3 className={classes.subtitle} style={{color:"black",fontWeight:"bold"}}>
+                Contact for Premium Business Services
+                </h3>
+                <h3 className={classes.subtitle} style={{color:"black",fontWeight:"bold"}}>
+                Why not join our fast growing customer base? Get in touch today to learn more about the story.
+
+
                 </h3>
                 </GridItem>
               </div>

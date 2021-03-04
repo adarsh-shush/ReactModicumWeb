@@ -13,12 +13,13 @@ import SectionAboutUsPills from './SectionAboutUsPills';
 
 const useStyles = makeStyles((theme) => ({
   media: {
-    height: '256px'
+    height: '150px'
   },
   mediaLarge: {
     minHeight: '256px',
     height: '100%'
   },
+
   fullHeight: {
     height: '100%',
     width: '100%'
@@ -63,9 +64,10 @@ export default function ImageSection(props) {
             <Grid item xs={12} md={12} className={classes.imagesColumn}>
               <Grid container spacing={2}>
                 <Grid item xs={12} md={8}>
-                  <Box display="flex" height="100%">
+                  <Box display="flex" height="80%">
                     <Card className={classes.fullHeight}>
                       <CardMedia className={classes.mediaLarge} image={content['image1']} />
+                      <div></div>
                     </Card>
                   </Box>
                 </Grid>
@@ -98,7 +100,7 @@ export default function ImageSection(props) {
                   </Grid>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                  <Box display="flex" height="100%">
+                  <Box display="flex" height="80%">
                     <Card className={classes.fullHeight}>
                       <CardMedia className={classes.mediaLarge} image={content['image4']} />
                     </Card>
