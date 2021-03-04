@@ -1,6 +1,6 @@
 {
   "name": "material-kit-react",
-  "homepage": "http://adarshmahendrakar.github.io/ReactModicumWeb",
+  "homepage": "https://adarshmahendrakar.github.io/ReactModicumWeb/",
   "version": "1.9.0",
   "description": "Modicum Technologies",
   "private": true,
@@ -42,7 +42,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build && gulp licenses",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint:check": "eslint . --ext=js,jsx;  exit 0",
