@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1f8aae104eee15e8fff77769244ee002",
+    "revision": "028ff2b9b2e817abcce222bd50054e4e",
     "url": "/ReactModicumWeb/index.html"
   },
   {
-    "revision": "94ab34884e3eb2782bea",
+    "revision": "cb0a8bcc2b3f1f553555",
     "url": "/ReactModicumWeb/static/css/main.c5a3ee5c.chunk.css"
   },
   {
-    "revision": "929a16b6812e296dea9a",
-    "url": "/ReactModicumWeb/static/js/2.00a091a4.chunk.js"
+    "revision": "c376c04cfa7382fb4fb0",
+    "url": "/ReactModicumWeb/static/js/2.249fdd2c.chunk.js"
   },
   {
     "revision": "9106121d9ee5938d92b695826364e36d",
-    "url": "/ReactModicumWeb/static/js/2.00a091a4.chunk.js.LICENSE.txt"
+    "url": "/ReactModicumWeb/static/js/2.249fdd2c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "94ab34884e3eb2782bea",
-    "url": "/ReactModicumWeb/static/js/main.ccb0f774.chunk.js"
+    "revision": "cb0a8bcc2b3f1f553555",
+    "url": "/ReactModicumWeb/static/js/main.8c50ce66.chunk.js"
   },
   {
     "revision": "f8480c58d8bd618392de",
